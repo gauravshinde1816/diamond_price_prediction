@@ -1,0 +1,84 @@
+{% extends "layout.html"%}
+
+{% block content %}
+
+<div>
+    <!-- <h2>Precitive Analysis</h2>
+    <img src="{{ url_for('static', filename='images/diamond.png') }}"> -->
+    <div class="container  text-center my-5">
+        <div class="jumbotron d-flex bg-dark text-white">
+            <img style="height: 80px; width: 80px;" src="{{ url_for('static', filename='images/prediction.png') }}">
+            <div style="margin-left: 50px;">
+                <h1 class="display-4">Diamond Price Predicition</h1>
+                <p class="lead font-weight-bold">Predictive Analysis of Diamond price based on varoius factors.</p>
+            </div>
+
+            <hr class="my-4">
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-dark">
+                <h3 style="color: #595959; text-transform: uppercase; margin-bottom: 20px;">
+                    <img style="height: 45px; width: 45px; margin-right: 20px;" class="img-fluid"
+                        src="{{ url_for('static', filename='images/about.png') }}">How It works ?
+                </h3>
+                <span style="font-weight: 900;">
+                    We have considered the classic Diamonds dataset which contains the prices and other
+                    attributes of
+                    almost 54,000 diamonds and this dataset is hosted on Kaggle. The dataset contains 53940 rows
+                    and
+                    10 variables. Before jumping into building the model, let’s have a look into the variables &
+                    their definitions.</span>
+                <br>
+                <br>
+                <ul>
+                    <li> <span class="font-weight-bold">Price</span> is in US dollars</li>
+                    <li><span class="font-weight-bold">Carat</span> weight of the diamond</li>
+                    <li><span class="font-weight-bold">Cut</span> quality of the cut (Fair, Good, Very Good,
+                        Premium, Ideal)</li>
+                    <li><span class="font-weight-bold">Color</span> diamond colour, from J (worst) to D (best)</li>
+                    <li><span class="font-weight-bold">Clarity</span> a measurement of how clear the diamond is (I1
+                        (worst), SI2, SI1, VS2, VS1, VVS2,
+                        VVS1, IF (best))</li>
+                    <li> <span class="font-weight-bold">X</span> length in mm</li>
+                    <li> <span class="font-weight-bold">Y</span> length in mm</li>
+                    <li> <span class="font-weight-bold">Z</span> length in mm</li>
+                    <li><span class="font-weight-bold">Depth</span> : The height of a diamond</li>
+                    <li><span class="font-weight-bold">Table</span> : The width of the diamond’s table expressed as
+                        a percentage of its average diameter
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-around">
+                    <a href="/predict" style="width: 260px;" class="btn btn-lg btn-success">
+                        <img style="height: 40px; width: 40px; margin-right: 20px;" class="img-fluid"
+                            src="{{ url_for('static', filename='images/predict.png') }}">
+                        Predict Price
+                    </a>
+
+                    <a href="../dataset.csv" download="diamond-dataset.csv" style="width: 260px; margin-right: 30px;"
+                        class="btn btn-lg btn-primary">
+                        <i class="fa fa-table" aria-hidden="true"></i>
+                        Download Dataset
+                    </a>
+
+                    <a href="https://github.com/akmadan/diamond_price_prediction/blob/main/code_notebook.ipynb"
+                        download="ipython-diamond.ipynb" style="width: 360px;" class="btn btn-lg btn-warning">
+                        <img style="height: 40px; width: 40px; margin-right: 20px;" class="img-fluid"
+                            src="{{ url_for('static', filename='images/ipython.png') }}">
+                        Download Ipython Notebook
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock content %}
